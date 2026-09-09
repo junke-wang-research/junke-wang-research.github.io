@@ -1,0 +1,20 @@
+/* ESIL refinements: independent lab identity, research map, and PI photography */
+.utility{display:none!important}
+.site-header{top:0}
+.brand-text span{max-width:460px}
+.research-map{border:1px solid rgba(255,255,255,.30);background:rgba(255,255,255,.075);padding:28px}
+.research-map h2{color:#fff;font-size:20px;margin-bottom:8px}
+.research-map-intro{font-size:14px!important;line-height:1.5!important;color:rgba(255,255,255,.78)!important;margin:0 0 20px!important}
+.research-map-grid{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr;gap:8px;align-items:stretch}
+.research-map-card{border:1px solid rgba(255,255,255,.30);background:rgba(255,255,255,.07);padding:16px 14px;display:flex;flex-direction:column;gap:6px;min-height:150px}
+.research-map-card span{font-size:11px;font-weight:900;letter-spacing:.14em;color:#f0caca}
+.research-map-card strong{color:#fff;font-size:15px;line-height:1.3}
+.research-map-card small{color:rgba(255,255,255,.76);font-size:12px;line-height:1.45;margin-top:auto}
+.research-map-arrow{display:grid;place-items:center;color:#f0caca;font-size:22px;font-weight:900}
+.research-map-feedback{margin-top:18px;padding-top:15px;border-top:1px solid rgba(255,255,255,.22);display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,.79);font-size:13px;line-height:1.5}
+.research-map-feedback span{font-size:20px;line-height:1;color:#f0caca}
+.profile-photo-wrap{margin:0;width:250px}
+.profile-photo{display:block;width:250px;aspect-ratio:4/5;object-fit:cover;object-position:center 34%;border:1px solid var(--line);background:#eee}
+.site-footer .small{max-width:560px}
+@media(max-width:980px){.research-map-grid{grid-template-columns:1fr}.research-map-arrow{transform:rotate(90deg)}.profile-photo-wrap,.profile-photo{width:190px}}
+@media(max-width:680px){.brand-text span{display:none}.research-map{padding:22px}.profile-photo-wrap,.profile-photo{width:min(250px,100%)}}
