@@ -1,4 +1,4 @@
-/* ESIL refinements: consistent site-wide width, balanced homepage hero, readable research map, and PI photography */
+/* ESIL refinements: OU-inspired light academic layout, consistent site-wide width, readable diagrams, and responsive behavior */
 :root{--max:1360px}
 .utility{display:none!important}
 .site-header{top:0}
@@ -11,97 +11,76 @@ nav ul{gap:30px}
 nav a{font-size:16px;padding-top:34px;padding-bottom:31px}
 .container{width:min(calc(100% - 52px),var(--max))}
 
-/* Homepage hero: light academic treatment with crimson used as an accent rather than a full-page field. */
+/* Shared page-title language: light surfaces, strong typography, restrained crimson accent. */
+.page-title{
+  background:linear-gradient(180deg,#ffffff 0%,#fbfaf9 100%);
+  border-top:3px solid var(--crimson);
+  border-bottom:1px solid var(--line);
+}
+.page-title h1{font-size:clamp(44px,4.5vw,64px)}
+.page-title p{font-size:20px;max-width:920px}
+.section-alt{background:#f7f5f4}
+
+/* Homepage hero: warm, light academic treatment; crimson is an accent rather than a full-page field. */
 .hero{
-  padding:70px 0 68px;
-  background:linear-gradient(135deg,#fbfaf9 0%,#f7f2f1 55%,#f2e8e8 100%);
+  padding:68px 0 66px;
+  background:linear-gradient(135deg,#ffffff 0%,#fbf9f8 52%,#f4eaea 100%);
   color:var(--ink);
+  border-top:4px solid var(--crimson);
   border-bottom:1px solid var(--line);
 }
 .hero::after{
   background:
-    radial-gradient(circle at 84% 18%,rgba(132,22,23,.075),transparent 28%),
-    linear-gradient(90deg,transparent 0 70%,rgba(132,22,23,.025) 70% 71%,transparent 71%);
+    radial-gradient(circle at 83% 18%,rgba(132,22,23,.065),transparent 27%),
+    linear-gradient(90deg,transparent 0 72%,rgba(132,22,23,.018) 72% 73%,transparent 73%);
 }
 .hero .container{width:min(calc(100% - 52px),var(--max))}
 .hero-inner{
-  grid-template-columns:minmax(0,1.08fr) minmax(480px,.92fr);
-  gap:50px;
+  grid-template-columns:minmax(0,1.05fr) minmax(500px,.95fr);
+  gap:54px;
   align-items:center;
 }
 .hero .eyebrow{color:var(--crimson)}
 .hero h1{
   color:var(--ink);
-  max-width:12ch;
-  font-size:clamp(3.35rem,4.35vw,4.75rem);
-  line-height:1.01;
-  margin-bottom:25px;
+  max-width:12.5ch;
+  font-size:clamp(3.15rem,4.05vw,4.45rem);
+  line-height:1.02;
+  margin-bottom:24px;
 }
 .hero p{
-  color:#4a4a4a;
-  max-width:780px;
-  font-size:1.16rem;
+  color:#4c4c4c;
+  max-width:760px;
+  font-size:1.13rem;
   line-height:1.6;
-  margin-bottom:30px;
+  margin-bottom:29px;
 }
-.hero-note{font-size:1rem;line-height:1.5;margin-top:24px;color:#666}
+.hero-note{font-size:.98rem;line-height:1.5;margin-top:23px;color:#666}
 .hero .button.primary{background:var(--crimson);border-color:var(--crimson);color:#fff}
 .hero .button.primary:hover{background:var(--crimson-dark);border-color:var(--crimson-dark);color:#fff}
-.hero .button.secondary{background:#fff;border-color:#b77778;color:var(--crimson)}
-.hero .button.secondary:hover{background:#f7eded;color:var(--crimson-dark)}
+.hero .button.secondary{background:#fff;border-color:#bd8c8d;color:var(--crimson)}
+.hero .button.secondary:hover{background:#f8eeee;color:var(--crimson-dark)}
 
-/* Homepage research architecture diagram: restrained rose panel that connects visually to the rest of the site. */
+/* Research architecture: white/rose cards, closer to the light card-based language of OU engineering pages. */
 .research-map{
-  border:1px solid #d7b8b8;
-  background:linear-gradient(145deg,#f5eaea 0%,#f1e3e3 100%);
-  padding:32px 30px;
+  border:1px solid #d9c2c2;
+  border-top:4px solid var(--crimson);
+  background:#fff;
+  padding:30px 28px;
   min-height:100%;
   color:var(--text);
-  box-shadow:0 12px 34px rgba(92,15,16,.07);
+  box-shadow:0 14px 34px rgba(0,0,0,.055);
 }
-.research-map h2{
-  color:var(--ink);
-  font-size:27px;
-  line-height:1.2;
-  margin-bottom:11px;
-}
-.research-map-intro{
-  font-size:16.5px!important;
-  line-height:1.58!important;
-  color:#5b5050!important;
-  margin:0 0 23px!important;
-}
-.research-map-grid{
-  display:grid;
-  grid-template-columns:1fr 32px 1fr 32px 1fr;
-  gap:10px;
-  align-items:stretch;
-}
-.research-map-card{
-  border:1px solid #d2b0b0;
-  background:rgba(255,255,255,.70);
-  padding:20px 17px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  min-height:198px;
-}
+.research-map h2{color:var(--ink);font-size:26px;line-height:1.2;margin-bottom:10px}
+.research-map-intro{font-size:16px!important;line-height:1.58!important;color:#5c5555!important;margin:0 0 22px!important}
+.research-map-grid{display:grid;grid-template-columns:1fr 30px 1fr 30px 1fr;gap:10px;align-items:stretch}
+.research-map-card{border:1px solid #ded2d2;background:#fbf7f7;padding:19px 16px;display:flex;flex-direction:column;gap:8px;min-height:188px}
 .research-map-card span{font-size:11.5px;font-weight:900;letter-spacing:.14em;color:var(--crimson)}
-.research-map-card strong{color:var(--ink);font-size:17.5px;line-height:1.26}
-.research-map-card small{color:#665858;font-size:14px;line-height:1.56;margin-top:auto}
-.research-map-arrow{display:grid;place-items:center;color:var(--crimson);font-size:31px;font-weight:900}
-.research-map-feedback{
-  margin-top:20px;
-  padding-top:17px;
-  border-top:1px solid #d4b4b4;
-  display:flex;
-  gap:11px;
-  align-items:flex-start;
-  color:#5f5252;
-  font-size:14.5px;
-  line-height:1.52;
-}
-.research-map-feedback span{font-size:22px;line-height:1;color:var(--crimson)}
+.research-map-card strong{color:var(--ink);font-size:17px;line-height:1.26}
+.research-map-card small{color:#645b5b;font-size:13.8px;line-height:1.56;margin-top:auto}
+.research-map-arrow{display:grid;place-items:center;color:var(--crimson);font-size:29px;font-weight:900}
+.research-map-feedback{margin-top:19px;padding-top:16px;border-top:1px solid #dfd2d2;display:flex;gap:11px;align-items:flex-start;color:#5f5757;font-size:14px;line-height:1.52}
+.research-map-feedback span{font-size:21px;line-height:1;color:var(--crimson)}
 
 /* Shared content scale across all tabs. */
 section{padding:76px 0}
@@ -111,14 +90,24 @@ section{padding:76px 0}
 .card{padding:30px}
 .feature-row{grid-template-columns:155px 1fr;gap:28px}
 .news-item{grid-template-columns:145px 1fr;gap:31px}
-.page-title h1{font-size:clamp(44px,4.5vw,64px)}
-.page-title p{font-size:20px;max-width:920px}
 
 /* People page photo. */
 .profile-photo-wrap{margin:0;width:255px}
 .profile-photo{display:block;width:255px;aspect-ratio:4/5;object-fit:cover;object-position:center 34%;border:1px solid var(--line);background:#eee}
 .profile{grid-template-columns:255px 1fr;gap:44px}
 .site-footer .small{max-width:590px}
+
+/* Large desktop: grow the canvas moderately, not the headline. */
+@media(min-width:1600px){
+  :root{--max:1420px}
+  .container,.hero .container{width:min(calc(100% - 84px),var(--max))}
+  .header-inner{min-height:100px}
+  .hero-inner{grid-template-columns:minmax(0,1.02fr) minmax(570px,.98fr);gap:68px}
+  .hero h1{font-size:4.5rem;max-width:12.8ch}
+  .hero p{font-size:1.16rem;max-width:800px}
+  .research-map{padding:34px 32px}
+  .research-map-card{min-height:194px}
+}
 
 @media(max-width:1240px){
   :root{--max:1180px}
@@ -130,12 +119,12 @@ section{padding:76px 0}
   nav ul{gap:24px}
   nav a{font-size:15px}
   .hero-inner{grid-template-columns:minmax(0,1fr) minmax(420px,.9fr);gap:38px}
-  .hero h1{font-size:clamp(3.1rem,4.5vw,4.35rem)}
-  .research-map{padding:28px 25px}
+  .hero h1{font-size:clamp(2.95rem,4.25vw,4.05rem)}
+  .research-map{padding:27px 24px}
   .research-map-grid{grid-template-columns:1fr 26px 1fr 26px 1fr;gap:8px}
-  .research-map-card{min-height:184px;padding:18px 15px}
-  .research-map-card strong{font-size:16.5px}
-  .research-map-card small{font-size:13.5px}
+  .research-map-card{min-height:180px;padding:17px 14px}
+  .research-map-card strong{font-size:16.3px}
+  .research-map-card small{font-size:13.3px}
 }
 @media(max-width:980px){
   :root{--max:900px}
@@ -145,73 +134,18 @@ section{padding:76px 0}
   .brand-text strong{font-size:15px}
   .brand-text span{font-size:12px}
   nav a{font-size:14px}
-  .hero{padding:58px 0}
+  .hero{padding:56px 0}
   .hero-inner{grid-template-columns:1fr;gap:30px}
-  .hero h1{max-width:12ch;font-size:clamp(2.9rem,7vw,3.85rem)}
-
-  /* Mobile/tablet research architecture: true vertical flow with attached downward connectors. */
-  .research-map-grid{
-    grid-template-columns:1fr;
-    gap:0;
-  }
-  .research-map-card{
-    min-height:auto;
-    padding:20px 18px;
-  }
-  .research-map-arrow{
-    position:relative;
-    height:42px;
-    font-size:0;
-    transform:none;
-    display:block;
-  }
-  .research-map-arrow::before{
-    content:"↓";
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    color:var(--crimson);
-    font-size:30px;
-    line-height:1;
-    font-weight:900;
-  }
+  .hero h1{max-width:13ch;font-size:clamp(2.75rem,6.7vw,3.65rem)}
+  .research-map-grid{grid-template-columns:1fr;gap:0}
+  .research-map-card{min-height:auto;padding:20px 18px}
+  .research-map-arrow{position:relative;height:42px;font-size:0;transform:none;display:block}
+  .research-map-arrow::before{content:"↓";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--crimson);font-size:30px;line-height:1;font-weight:900}
   .research-map-feedback{margin-top:16px}
-
-  /* Research / Facilities workflow: one card, one connector, one card. */
-  .approach{
-    display:flex;
-    flex-direction:column;
-    gap:0;
-    align-items:stretch;
-  }
-  .approach-step{
-    width:100%;
-    min-height:118px;
-    padding:26px 20px;
-    font-size:20px;
-  }
-  .approach-arrow{
-    position:relative;
-    width:100%;
-    height:56px;
-    margin:0;
-    transform:none;
-    font-size:0;
-    line-height:1;
-  }
-  .approach-arrow::before{
-    content:"↓";
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    color:var(--crimson);
-    font-size:36px;
-    line-height:1;
-    font-weight:900;
-  }
-
+  .approach{display:flex;flex-direction:column;gap:0;align-items:stretch}
+  .approach-step{width:100%;min-height:118px;padding:26px 20px;font-size:20px}
+  .approach-arrow{position:relative;width:100%;height:56px;margin:0;transform:none;font-size:0;line-height:1}
+  .approach-arrow::before{content:"↓";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--crimson);font-size:36px;line-height:1;font-weight:900}
   .profile{grid-template-columns:205px 1fr;gap:32px}
   .profile-photo-wrap,.profile-photo{width:205px}
   section{padding:60px 0}
@@ -223,25 +157,19 @@ section{padding:76px 0}
   .brand-mark{width:48px;height:48px;flex-basis:48px;font-size:14px}
   .brand-text strong{font-size:14px}
   nav a{font-size:14px}
-  .hero h1{font-size:clamp(2.45rem,10vw,3.15rem)}
-  .hero p{font-size:1.02rem}
-  .research-map{padding:21px}
-  .research-map h2{font-size:22px}
-  .research-map-intro{font-size:15px!important}
-  .research-map-card{padding:18px 16px}
-  .research-map-card strong{font-size:17px}
-  .research-map-card small{font-size:14px}
-  .research-map-arrow{height:38px}
-  .research-map-arrow::before{font-size:28px}
-
-  .approach-step{
-    min-height:104px;
-    padding:22px 16px;
-    font-size:18px;
-  }
+  .hero h1{font-size:clamp(2.3rem,9.6vw,2.95rem)}
+  .hero p{font-size:1rem}
+  .research-map{padding:20px}
+  .research-map h2{font-size:21px}
+  .research-map-intro{font-size:14.5px!important}
+  .research-map-card{padding:17px 15px}
+  .research-map-card strong{font-size:16.5px}
+  .research-map-card small{font-size:13.5px}
+  .research-map-arrow{height:36px}
+  .research-map-arrow::before{font-size:27px}
+  .approach-step{min-height:104px;padding:22px 16px;font-size:18px}
   .approach-arrow{height:48px}
   .approach-arrow::before{font-size:32px}
-
   .profile{grid-template-columns:1fr}
   .profile-photo-wrap,.profile-photo{width:min(255px,100%)}
   .feature-row,.news-item{grid-template-columns:1fr;gap:6px}
