@@ -11,37 +11,56 @@ nav ul{gap:30px}
 nav a{font-size:16px;padding-top:34px;padding-bottom:31px}
 .container{width:min(calc(100% - 52px),var(--max))}
 
-/* Homepage hero: same shared site width, with a balanced two-column composition. */
-.hero{padding:74px 0 70px}
+/* Homepage hero: light academic treatment with crimson used as an accent rather than a full-page field. */
+.hero{
+  padding:70px 0 68px;
+  background:linear-gradient(135deg,#fbfaf9 0%,#f7f2f1 55%,#f2e8e8 100%);
+  color:var(--ink);
+  border-bottom:1px solid var(--line);
+}
+.hero::after{
+  background:
+    radial-gradient(circle at 84% 18%,rgba(132,22,23,.075),transparent 28%),
+    linear-gradient(90deg,transparent 0 70%,rgba(132,22,23,.025) 70% 71%,transparent 71%);
+}
 .hero .container{width:min(calc(100% - 52px),var(--max))}
 .hero-inner{
-  grid-template-columns:minmax(0,1.1fr) minmax(480px,.9fr);
-  gap:48px;
+  grid-template-columns:minmax(0,1.08fr) minmax(480px,.92fr);
+  gap:50px;
   align-items:center;
 }
+.hero .eyebrow{color:var(--crimson)}
 .hero h1{
-  max-width:11.7ch;
-  font-size:clamp(3.9rem,5.05vw,5.5rem);
-  line-height:.99;
-  margin-bottom:27px;
+  color:var(--ink);
+  max-width:12ch;
+  font-size:clamp(3.35rem,4.35vw,4.75rem);
+  line-height:1.01;
+  margin-bottom:25px;
 }
 .hero p{
+  color:#4a4a4a;
   max-width:780px;
-  font-size:1.18rem;
-  line-height:1.58;
-  margin-bottom:31px;
+  font-size:1.16rem;
+  line-height:1.6;
+  margin-bottom:30px;
 }
-.hero-note{font-size:1rem;line-height:1.5;margin-top:24px}
+.hero-note{font-size:1rem;line-height:1.5;margin-top:24px;color:#666}
+.hero .button.primary{background:var(--crimson);border-color:var(--crimson);color:#fff}
+.hero .button.primary:hover{background:var(--crimson-dark);border-color:var(--crimson-dark);color:#fff}
+.hero .button.secondary{background:#fff;border-color:#b77778;color:var(--crimson)}
+.hero .button.secondary:hover{background:#f7eded;color:var(--crimson-dark)}
 
-/* Homepage research architecture diagram. */
+/* Homepage research architecture diagram: restrained rose panel that connects visually to the rest of the site. */
 .research-map{
-  border:1px solid rgba(255,255,255,.30);
-  background:rgba(255,255,255,.078);
+  border:1px solid #d7b8b8;
+  background:linear-gradient(145deg,#f5eaea 0%,#f1e3e3 100%);
   padding:32px 30px;
   min-height:100%;
+  color:var(--text);
+  box-shadow:0 12px 34px rgba(92,15,16,.07);
 }
 .research-map h2{
-  color:#fff;
+  color:var(--ink);
   font-size:27px;
   line-height:1.2;
   margin-bottom:11px;
@@ -49,7 +68,7 @@ nav a{font-size:16px;padding-top:34px;padding-bottom:31px}
 .research-map-intro{
   font-size:16.5px!important;
   line-height:1.58!important;
-  color:rgba(255,255,255,.84)!important;
+  color:#5b5050!important;
   margin:0 0 23px!important;
 }
 .research-map-grid{
@@ -59,30 +78,30 @@ nav a{font-size:16px;padding-top:34px;padding-bottom:31px}
   align-items:stretch;
 }
 .research-map-card{
-  border:1px solid rgba(255,255,255,.30);
-  background:rgba(255,255,255,.075);
+  border:1px solid #d2b0b0;
+  background:rgba(255,255,255,.70);
   padding:20px 17px;
   display:flex;
   flex-direction:column;
   gap:8px;
   min-height:198px;
 }
-.research-map-card span{font-size:11.5px;font-weight:900;letter-spacing:.14em;color:#f0caca}
-.research-map-card strong{color:#fff;font-size:17.5px;line-height:1.26}
-.research-map-card small{color:rgba(255,255,255,.82);font-size:14px;line-height:1.56;margin-top:auto}
-.research-map-arrow{display:grid;place-items:center;color:#f0caca;font-size:31px;font-weight:900}
+.research-map-card span{font-size:11.5px;font-weight:900;letter-spacing:.14em;color:var(--crimson)}
+.research-map-card strong{color:var(--ink);font-size:17.5px;line-height:1.26}
+.research-map-card small{color:#665858;font-size:14px;line-height:1.56;margin-top:auto}
+.research-map-arrow{display:grid;place-items:center;color:var(--crimson);font-size:31px;font-weight:900}
 .research-map-feedback{
   margin-top:20px;
   padding-top:17px;
-  border-top:1px solid rgba(255,255,255,.23);
+  border-top:1px solid #d4b4b4;
   display:flex;
   gap:11px;
   align-items:flex-start;
-  color:rgba(255,255,255,.84);
+  color:#5f5252;
   font-size:14.5px;
   line-height:1.52;
 }
-.research-map-feedback span{font-size:22px;line-height:1;color:#f0caca}
+.research-map-feedback span{font-size:22px;line-height:1;color:var(--crimson)}
 
 /* Shared content scale across all tabs. */
 section{padding:76px 0}
@@ -110,8 +129,8 @@ section{padding:76px 0}
   .brand-text span{font-size:13px}
   nav ul{gap:24px}
   nav a{font-size:15px}
-  .hero-inner{grid-template-columns:minmax(0,1fr) minmax(420px,.9fr);gap:36px}
-  .hero h1{font-size:clamp(3.5rem,5vw,5rem)}
+  .hero-inner{grid-template-columns:minmax(0,1fr) minmax(420px,.9fr);gap:38px}
+  .hero h1{font-size:clamp(3.1rem,4.5vw,4.35rem)}
   .research-map{padding:28px 25px}
   .research-map-grid{grid-template-columns:1fr 26px 1fr 26px 1fr;gap:8px}
   .research-map-card{min-height:184px;padding:18px 15px}
@@ -126,9 +145,9 @@ section{padding:76px 0}
   .brand-text strong{font-size:15px}
   .brand-text span{font-size:12px}
   nav a{font-size:14px}
-  .hero{padding:60px 0}
+  .hero{padding:58px 0}
   .hero-inner{grid-template-columns:1fr;gap:30px}
-  .hero h1{max-width:12ch}
+  .hero h1{max-width:12ch;font-size:clamp(2.9rem,7vw,3.85rem)}
 
   /* Mobile/tablet research architecture: true vertical flow with attached downward connectors. */
   .research-map-grid{
@@ -152,7 +171,7 @@ section{padding:76px 0}
     left:50%;
     top:50%;
     transform:translate(-50%,-50%);
-    color:#f0caca;
+    color:var(--crimson);
     font-size:30px;
     line-height:1;
     font-weight:900;
@@ -204,8 +223,8 @@ section{padding:76px 0}
   .brand-mark{width:48px;height:48px;flex-basis:48px;font-size:14px}
   .brand-text strong{font-size:14px}
   nav a{font-size:14px}
-  .hero h1{font-size:clamp(2.75rem,11.5vw,3.9rem)}
-  .hero p{font-size:1.03rem}
+  .hero h1{font-size:clamp(2.45rem,10vw,3.15rem)}
+  .hero p{font-size:1.02rem}
   .research-map{padding:21px}
   .research-map h2{font-size:22px}
   .research-map-intro{font-size:15px!important}
