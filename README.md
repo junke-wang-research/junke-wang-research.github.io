@@ -1,35 +1,46 @@
-# ESIL website package
+# Energy Systems Intelligence Laboratory (ESIL) website
 
-This is a static, mobile-responsive website for the **Energy Systems Intelligence Laboratory (ESIL)** at the University of Oklahoma.
+Live site: **https://junke-wang-research.github.io/**
 
-## Recommended publishing path: GitHub Pages
+This repository hosts the public website for the Energy Systems Intelligence Laboratory (ESIL), School of Aerospace and Mechanical Engineering, University of Oklahoma.
 
-Why: public HTTPS URL, no hosting fee for a public repository, full ownership/portability, easy browser-based edits, and custom-domain support later.
+## Site map
 
-### Publish
-1. Create a **public** GitHub repository named `junke-wang-research.github.io`.
-2. Upload all files in this folder to the repository root.
-3. In **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then Save.
-4. The public URL will be `https://junke-wang-research.github.io/`.
+- `index.html` — homepage, mission, research overview, news, opportunities
+- `research.html` — research thrusts and research workflow
+- `people.html` — PI and lab-member profiles
+- `publications.html` — selected publications and patent
+- `facilities.html` — experimental and computational capabilities
+- `join.html` — prospective-student information
+- `assets/styles.css` — visual design and responsive layout
+- `assets/site.js` — mobile navigation and automatic footer year
+- `assets/favicon.svg` — browser icon
+- `assets/og-card.svg` — social-sharing graphic
+- `robots.txt` and `sitemap.xml` — search-engine discovery
 
-### Edit later
-- Text: edit the relevant `.html` file in the GitHub web editor.
-- Styling: edit `assets/styles.css`.
-- Footer year: automatic via `assets/site.js`.
-- Publications: edit `publications.html`.
-- New team members: edit `people.html`.
+## Editing
 
-## Before public launch
-- Replace the `JW` headshot placeholder on `people.html` with an optimized headshot if desired.
-- Review every date, publication, job title, and contact detail.
-- Do **not** upload the provided CV without updating its PNNL contact/address first.
-- If you add OU logos/wordmarks or make this an official OU unit site, follow OU Marketing & Communications review and branding requirements.
-- Keep images under ~500 KB where practical and provide meaningful alt text.
+For a small text change, open the relevant HTML file on GitHub, click the pencil icon, edit, and commit to `main`. GitHub Pages automatically redeploys the site.
 
-## Suggested future additions
-- Project pages with 1 figure + 150–250 words + sponsor/collaborators.
-- Lab member profile cards and alumni outcomes.
-- Facility photos and verified chamber specifications.
-- News items only when you can keep them current.
-- DOI links or BibTeX download for publications.
-- GitHub/software/data links when public repositories become available.
+For larger changes, update the files locally or through the connected GitHub workflow. Keep semantic HTML, one H1 per page, descriptive link text, keyboard-accessible controls, and meaningful image alt text.
+
+## Adding images
+
+Use original lab photography rather than stock images where possible. Compress web images before upload. Use descriptive file names such as `junke-wang-headshot.jpg`, `environmental-chamber.jpg`, or `heat-pump-testbed.jpg`, and add useful `alt` text in the HTML.
+
+## Content maintenance
+
+- Update People when appointments become official.
+- Add verified project titles, sponsors, collaborators, dates, and outcomes when public.
+- Add chamber ranges, equipment capacities, sensor inventories, and testbed photographs only after verification/commissioning.
+- Keep News current; remove stale announcements rather than letting the page become dated.
+- Google Scholar remains the authoritative link for the complete publication record.
+- Do not upload the older CV until its PNNL contact/address and current OU appointment information are updated.
+
+## OU web considerations
+
+This GitHub Pages site does not use the official OU logo or wordmark. It includes an OU affiliation statement, accessibility link/contact, and the OU personal-page disclaimer. Before treating the site as an official OU unit website or adding official OU marks, obtain the appropriate OU Marketing & Communications review and follow current OU web/brand requirements.
+
+## Hosting
+
+GitHub Pages hosting and the default `github.io` address are sufficient for this site. A paid custom domain is optional, not required.
