@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://junke-wang-research.github.io/sitemap.xml
