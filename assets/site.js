@@ -1,4 +1,13 @@
 document.documentElement.classList.add('js');
+
+// Load the shared refinement stylesheet on every page so all tabs use the same layout.
+if(!document.querySelector('link[href$="refinements.css"]')){
+  const link=document.createElement('link');
+  link.rel='stylesheet';
+  link.href='assets/refinements.css';
+  document.head.appendChild(link);
+}
+
 document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 const utility=document.querySelector('.utility');
 if(utility) utility.remove();
