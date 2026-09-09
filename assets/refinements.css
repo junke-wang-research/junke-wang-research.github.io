@@ -129,9 +129,70 @@ section{padding:76px 0}
   .hero{padding:60px 0}
   .hero-inner{grid-template-columns:1fr;gap:30px}
   .hero h1{max-width:12ch}
-  .research-map-grid{grid-template-columns:1fr}
-  .research-map-arrow{transform:rotate(90deg);font-size:26px}
-  .research-map-card{min-height:auto}
+
+  /* Mobile/tablet research architecture: true vertical flow with attached downward connectors. */
+  .research-map-grid{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .research-map-card{
+    min-height:auto;
+    padding:20px 18px;
+  }
+  .research-map-arrow{
+    position:relative;
+    height:42px;
+    font-size:0;
+    transform:none;
+    display:block;
+  }
+  .research-map-arrow::before{
+    content:"↓";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    color:#f0caca;
+    font-size:30px;
+    line-height:1;
+    font-weight:900;
+  }
+  .research-map-feedback{margin-top:16px}
+
+  /* Research / Facilities workflow: one card, one connector, one card. */
+  .approach{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    align-items:stretch;
+  }
+  .approach-step{
+    width:100%;
+    min-height:118px;
+    padding:26px 20px;
+    font-size:20px;
+  }
+  .approach-arrow{
+    position:relative;
+    width:100%;
+    height:56px;
+    margin:0;
+    transform:none;
+    font-size:0;
+    line-height:1;
+  }
+  .approach-arrow::before{
+    content:"↓";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    color:var(--crimson);
+    font-size:36px;
+    line-height:1;
+    font-weight:900;
+  }
+
   .profile{grid-template-columns:205px 1fr;gap:32px}
   .profile-photo-wrap,.profile-photo{width:205px}
   section{padding:60px 0}
@@ -148,9 +209,20 @@ section{padding:76px 0}
   .research-map{padding:21px}
   .research-map h2{font-size:22px}
   .research-map-intro{font-size:15px!important}
-  .research-map-card{padding:17px 15px}
-  .research-map-card strong{font-size:16px}
-  .research-map-card small{font-size:13px}
+  .research-map-card{padding:18px 16px}
+  .research-map-card strong{font-size:17px}
+  .research-map-card small{font-size:14px}
+  .research-map-arrow{height:38px}
+  .research-map-arrow::before{font-size:28px}
+
+  .approach-step{
+    min-height:104px;
+    padding:22px 16px;
+    font-size:18px;
+  }
+  .approach-arrow{height:48px}
+  .approach-arrow::before{font-size:32px}
+
   .profile{grid-template-columns:1fr}
   .profile-photo-wrap,.profile-photo{width:min(255px,100%)}
   .feature-row,.news-item{grid-template-columns:1fr;gap:6px}
