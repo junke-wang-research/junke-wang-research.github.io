@@ -13,6 +13,14 @@ const utility=document.querySelector('.utility');
 if(utility) utility.remove();
 const brandSub=document.querySelector('.brand-text span');
 if(brandSub) brandSub.textContent='Thermal systems · controls · optimization · experiments';
+
+document.querySelectorAll('.site-footer a').forEach(link=>{
+  if(link.textContent.trim()==='OU Aerospace & Mechanical Engineering'){
+    link.href='https://ou.edu/coe/ame/people/faculty/junke-wang';
+    link.textContent='Junke Wang · OU Faculty Profile';
+  }
+});
+
 document.querySelectorAll('.site-footer .small').forEach(el=>{
   const disclaimer='The opinions or statements expressed herein should not be taken as a position of or endorsement by the University of Oklahoma.';
   if(el.textContent.trim()===disclaimer) el.textContent='ESIL is an independently maintained research-group website led by Junke Wang. '+disclaimer;
