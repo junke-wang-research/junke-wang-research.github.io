@@ -1,0 +1,43 @@
+/* Fluid desktop layout for wide monitors.
+   Keeps the established tablet/mobile behavior below 1241px. */
+@media (min-width:1241px){
+  :root{
+    --desktop-edge:clamp(36px,3.25vw,88px);
+  }
+
+  /* Use the available desktop viewport instead of a fixed 1360/1420px canvas. */
+  .container,
+  .hero .container{
+    width:100%;
+    max-width:none;
+    padding-left:var(--desktop-edge);
+    padding-right:var(--desktop-edge);
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Keep the main two-column hero balanced as the viewport expands. */
+  .hero-inner{
+    grid-template-columns:minmax(0,1.06fr) minmax(520px,.94fr);
+    gap:clamp(46px,4vw,82px);
+  }
+
+  /* Preserve readable line lengths while allowing the page structure to spread out. */
+  .hero h1{max-width:12.5ch}
+  .hero p{max-width:780px}
+  .section-heading{max-width:940px}
+  .page-title p{max-width:960px}
+  .news-archive{max-width:1120px}
+
+  /* Let visual/card regions make productive use of wider screens. */
+  .grid{gap:clamp(24px,2vw,34px)}
+  .visual-grid{gap:clamp(24px,2vw,34px)}
+  .footer-grid{gap:clamp(54px,6vw,110px)}
+}
+
+/* Extra-wide monitors: increase breathing room at the edge without reintroducing
+   the large fixed empty margins created by a max-width cap. */
+@media (min-width:1900px){
+  :root{--desktop-edge:clamp(60px,4vw,112px)}
+  .hero-inner{gap:clamp(64px,4.5vw,104px)}
+}
