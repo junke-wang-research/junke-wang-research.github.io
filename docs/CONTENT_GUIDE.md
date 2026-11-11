@@ -35,7 +35,6 @@ Junke Wang is an Assistant Professor in the School of Aerospace and Mechanical E
 ### Home
 - Strong lab photo or chamber/testbed image.
 - 2–3 current news items.
-- One current recruiting call-to-action.
 
 ### Research
 For each major project, add:
@@ -66,7 +65,7 @@ Only publish verified specifications. Useful fields:
 - Controller-in-the-loop / hardware-in-the-loop capabilities
 
 ### Join Us
-Keep requirements concise. Do not promise funding unless a funded opening is confirmed. Ask for materials that let you assess fit quickly.
+Keep participation guidance concise. Advertise funded openings only when they are current and confirmed. For current OU students and collaborators, make expectations and contact guidance easy to understand.
 
 ## Search/SEO phrases to use naturally
 - building energy systems
