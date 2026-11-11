@@ -34,13 +34,6 @@ document.querySelectorAll('.site-footer .small').forEach(el=>{
   if(el.textContent.trim()===disclaimer) el.textContent='ESIL is an independently maintained research-group website led by Junke Wang. '+disclaimer;
 });
 
-// Keep recruiting language consistent site-wide if an older page is cached or missed.
-document.querySelectorAll('body *').forEach(el=>{
-  if(el.children.length===0 && /Spring\/Fall 2027/i.test(el.textContent)){
-    el.textContent=el.textContent.replace(/Spring\/Fall 2027/gi,'year-round in 2027');
-  }
-});
-
 const toggle=document.querySelector('.nav-toggle');
 const nav=document.querySelector('#primary-nav');
 if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Close':'Menu';});}
