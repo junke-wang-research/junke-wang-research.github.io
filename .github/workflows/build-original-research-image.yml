@@ -1,11 +1,7 @@
 name: Build original research illustration
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'assets/research_chunks/**'
-      - '.github/workflows/build-original-research-image.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
