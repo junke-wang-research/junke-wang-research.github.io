@@ -278,3 +278,45 @@ section{padding:76px 0}
     text-transform:uppercase;letter-spacing:.1em
   }
 }
+
+
+/* Responsive conceptual research illustration — Nov 2026 */
+.scale-section .container{min-width:0}
+.scale-figure{
+  display:block;
+  width:100%;
+  max-width:none;
+  margin:0 0 clamp(22px,2.4vw,36px);
+  overflow:hidden;
+}
+.scale-picture{
+  display:block;
+  width:100%;
+  max-width:100%;
+}
+.scale-image{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:2 / 1;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+}
+.scale-grid{
+  width:100%;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.scale-card{min-width:0}
+.matrix-wrap{max-width:100%}
+.research-matrix{max-width:100%}
+
+@media(max-width:980px){
+  .scale-figure,.scale-picture,.scale-image{width:100%;max-width:100%}
+  .scale-grid{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .scale-figure{margin-inline:0}
+  .scale-image{width:100%;height:auto}
+}
